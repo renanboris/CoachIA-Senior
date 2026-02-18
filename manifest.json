@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Aura - Senior Success Hub",
+  "version": "1.6", 
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>" 
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.senior.com.br/*"],
+      "js": ["shield.js", "dotlottie-player.js", "content.js"],
+      "css": ["style.css"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://*.senior.com.br/*"],
+      "js": ["bridge.js"],
+      "world": "ISOLATED",
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["aura.lottie"],
+      "matches": ["https://*.senior.com.br/*"]
+    }
+  ]
+}

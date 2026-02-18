@@ -1,0 +1,105 @@
+/* style.css - Aura Senior Success Hub */
+
+/* Contentor principal da Aura */
+#aura-floating-container {
+    position: fixed !important;
+    bottom: 50px;
+    right: 50px;
+    width: 180px !important;
+    height: 180px !important;
+    z-index: 2147483647 !important;
+    cursor: grab;
+    display: block !important;
+    /* Reset de estilos que podem ser herdados do site da Senior */
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+#aura-floating-container:active {
+    cursor: grabbing;
+}
+
+/* Estilização do Player Lottie */
+#aura-lottie-player {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+}
+
+/* Balão de fala posicionado acima do assistente */
+#aura-speech-bubble {
+    display: none; /* Escondido por padrão */
+    position: absolute !important;
+    bottom: 95% !important; /* Posiciona acima do gatinho */
+    right: 0 !important;
+    width: 260px !important;
+    background-color: #ffffff !important;
+    border: 2px solid #00ddb3 !important;
+    border-radius: 15px !important;
+    padding: 15px !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2) !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    z-index: 2147483647 !important;
+}
+
+/* Classe ativada via JavaScript para mostrar o balão */
+#aura-speech-bubble.active {
+    display: block !important;
+    animation: auraFadeIn 0.3s ease-out;
+}
+
+/* Texto dentro do balão */
+.aura-text {
+    color: #333 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 12px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+}
+
+/* Contentor dos botões de opção */
+.aura-options {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+}
+
+/* Estilo dos botões da Aura (Blindados contra CSS externo) */
+.aura-btn {
+    background-color: #00ddb3 !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 8px 14px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: background 0.2s ease !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
+    outline: none !important;
+}
+
+.aura-btn:hover {
+    background-color: #00c4a0 !important;
+    transform: translateY(-1px) !important;
+}
+
+.aura-btn:active {
+    transform: translateY(0px) !important;
+}
+
+/* Animação de entrada do balão */
+@keyframes auraFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
