@@ -5,8 +5,8 @@
     position: fixed !important;
     bottom: 50px;
     right: 50px;
-    width: 180px !important;
-    height: 180px !important;
+    width: 130px !important;
+    height: 130px !important;
     z-index: 2147483647 !important;
     cursor: grab;
     display: block !important;
