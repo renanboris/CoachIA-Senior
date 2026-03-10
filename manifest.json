@@ -1,14 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Aura - Senior Success Hub",
-  "version": "1.6", 
+  "description": "Assistente IA contextual para o sistema Senior X — DAP com RAG.",
+  "version": "2.0",
   "permissions": [
     "activeTab",
     "tabs",
     "scripting"
   ],
   "host_permissions": [
-    "<all_urls>" 
+    "https://*.senior.com.br/*"
   ],
   "background": {
     "service_worker": "background.js"
